@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: rgb(221, 73, 221);
+    color: black;
+    font-size: 20px;
+    height: 55px;
+    padding: 0 10px;
+    align-items: center;
+    display: flex;
+
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+}
+
+ul li{
+
+    letter-spacing: normal;
+}
+
+
+.Container{
+
+ display: grid;  
+ grid-template-rows: repeat(3 , 10vw);  /* we use vw in place of px to make our website responsive */
+ grid-template-columns: repeat(3 , 10vw);
+ font-family:"Outfit", sans-serif ;
+}
+
+.GameContainer{
+
+    background-color: yellow;
+    justify-content: center;
+    display: flex;
+    padding : 8vw;
+    
+}
+.Box{
+    border: 2px solid black;
+    font-size: 7vw;
+    display: flex;  /* to make the box as a flex box */
+    align-items: center;  /*horizontaly making content center in flex box*/
+    justify-content: center;  /*verticaly  making content center in flex box */
+
+
+}
+.Box:hover{
+
+    background-color: rgb(200, 224, 41);
+    cursor: pointer;
+}
+.info {
+    font-size: 22px;
+}
+.GameInfo{
+    margin-left: 3vw;
+    font-family: "Anta", sans-serif;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* for rremoving unwanted borders will make classes and add required one in the Box class */
+
+.bb-0{
+    border-bottom: 0vw;
+}
+.bl-0{
+    border-left: 0vw;
+}
+.br-0{
+    border-right: 0vw;
+}
+.bt-0{
+    border-top: 0vw;
+}
+.ImageBox{
+    display: none;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: #f3e7f9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
